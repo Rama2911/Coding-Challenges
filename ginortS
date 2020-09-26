@@ -1,0 +1,32 @@
+myString = input()
+myList = []
+letters = []
+letters2 = []
+numbers = []
+numbers2 =[]
+numbers3 = []
+bigList = []
+finalList = []
+for i in myString:
+    if i.isdigit() == True:
+        numbers.append(int(i))
+     
+    elif i.lower() == i:
+        letters.append(i)
+    else:
+        letters2.append(i)
+numbers = sorted(numbers)
+for n in numbers:
+    if n%2 == 0:
+        numbers2.append(n)
+    else:
+        numbers3.append(n)
+letters= sorted(letters)
+letters2 = sorted(letters2)
+bigList = letters+letters2+numbers3+numbers2
+for i in bigList:
+    string = str(i)
+    finalList.append(string)
+    
+result = "".join(finalList)
+print(result)
