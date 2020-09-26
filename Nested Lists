@@ -1,0 +1,22 @@
+dictionary = {}
+listOfgrades = []
+names = []
+numberOfStu = int(input())
+for i in range(numberOfStu):
+    name = input()
+    grade = float(input())
+    
+    listOfgrades.append(grade)
+    dictionary[name] = grade
+
+grades = sorted(listOfgrades)
+grades = list(dict.fromkeys(grades))
+secondLowest = grades[1]
+for c in dictionary:
+    if float(dictionary[c]) == float(secondLowest):
+        names.append(c)
+
+names = sorted(names)
+
+for i in names:
+    print(i)
